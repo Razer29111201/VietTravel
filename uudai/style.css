@@ -1,0 +1,58 @@
+.banner_stiker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.stiker {
+    width: 500px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+    border-left: 4px solid rgba(27, 160, 226, 1.00);
+}
+
+.stiker h1 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.stiker input {
+    width: 100%;
+    margin: 20px 0;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d8d8d8;
+    padding: 0 20px;
+    font-weight: 700;
+
+
+}
+
+.stiker span {
+    font-size: 12px;
+}
+
+.stiker i {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stiker h4 {
+    margin-top: 20px;
+}
+
+.btn {
+    text-align: center;
+    line-height: 3;
+    background-color: rgba(255, 94, 31, 1.00);
+    border-radius: 5px;
+    margin: 80px 0;
+}
+
+.btn a {
+    color: #fff;
+    font-weight: 600;
+}

@@ -1,0 +1,414 @@
+.banner_backgroud {
+    background-color: rgba(73, 179, 232, 1.00);
+    z-index: 1;
+    position: relative;
+
+}
+
+.banner {
+    z-index: 1;
+    height: 350px;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-evenly;
+}
+
+.bannerimg img {
+    border-radius: 5px;
+}
+
+.datve {
+
+    bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+.datve_list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+
+.datve_item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 20px;
+    line-height: 3;
+
+}
+
+.datve_item img,
+svg {
+    margin-right: 10px;
+    width: 30px;
+}
+
+.list {
+    border-radius: 10px;
+    top: 300px;
+    position: absolute;
+    background: linear-gradient(120deg, rgb(31, 165, 232) 0%, #5fe2eb 100%);
+    /* background-color: linear-gradient(direction, rgb(219, 168, 50), rgb(31, 165, 200)); */
+}
+
+.datve_detail {
+
+
+    bottom: -20px;
+}
+
+.detail_select,
+.select_left,
+.select_right {
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.detail_select {
+    padding: 30px 0;
+}
+
+.select_left {}
+
+.select_left li {
+    background-color: rgb(194, 194, 194);
+    color: #646363;
+    margin: 0 10px;
+    font-weight: 600;
+    line-height: 2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+}
+
+.select_left li:first-child {
+
+
+
+    background-color: #fff;
+
+
+    color: rgb(31, 165, 232);
+
+
+}
+
+.detail_people,
+.detail_chose {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-right: 20px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.detail_people p,
+.detail_chose p {
+    line-height: 2.5;
+    padding: 0 20px;
+
+    font-weight: 600;
+}
+
+.detail_people i,
+.detail_chose i {
+    padding: 0 10px;
+}
+
+.people_chose,
+.type_chose {
+    position: absolute;
+    top: 45px;
+    box-shadow: 0 2px 2px #646363;
+    left: 0;
+    right: 0;
+}
+
+.type_chose {
+    width: 200px;
+}
+
+.people_chose-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    color: #646363;
+    border-bottom: 1px solid #646363;
+    background-color: #fff;
+}
+
+.people_chose-item input {
+    width: 50px;
+    font-size: 20px;
+    outline: none;
+
+}
+
+.type_chose-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    color: #646363;
+    border-bottom: 1px solid #646363;
+    background-color: #fff;
+}
+
+.detail_input {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.detail_input-left,
+.detail_input-right {
+    display: flex;
+
+}
+
+.input_ {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input_ label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.input_ svg,
+.input_ img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+}
+
+.input_ input {
+    height: 50px;
+    width: 250px;
+    border-color: rgba(205, 208, 209, 0.5);
+    border-width: 3px 3px 3px 0px;
+    padding: 0 10px 0 40px;
+    color: rgb(31, 165, 232);
+    font-size: 18px;
+    outline: none;
+
+}
+
+.detail_input-left .input_:last-child input {
+    border-radius: 0 20px 20px 0;
+}
+
+.detail_input-left .input_:first-child input {
+    border-radius: 20px 0 0 20px;
+}
+
+.detail_input-right .input_:last-child input {
+    border-radius: 0 20px 20px 0;
+}
+
+.detail_input-right .input_:first-child input {
+    border-radius: 20px 0 0 20px;
+}
+
+.a {
+    position: relative;
+}
+
+.a input {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.a .search {
+    position: absolute;
+    right: 30px;
+}
+
+.qc {
+    margin-top: 300px;
+}
+
+
+.img_item img {
+    border-radius: 5px;
+}
+
+.ud {
+    margin-top: 40px;
+}
+
+.ud p {
+    text-align: center;
+    margin: 20px 0;
+
+
+
+}
+
+.ud p a {
+    color: rgba(1, 148, 243, 1.00);
+    font-weight: 600;
+}
+
+.col img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dieuhuong {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.dieuhuong_item {
+    margin: 0 5px;
+    padding: 0 10px;
+    line-height: 2;
+    border-radius: 16px;
+    font-weight: 600;
+    color: rgb(31, 165, 232)
+}
+
+.col {
+    position: relative;
+}
+
+.img_item h2 {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.img_item span {
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+}
+
+
+.more img {
+    margin: 0;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.more h5 {
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+.more .qc_item {
+    margin: 0;
+    height: 260px;
+}
+
+.more .row {
+    margin: 0 -4px;
+}
+
+.more .col {
+    padding: 0 4px;
+    /* margin-top: 20px; */
+}
+
+
+.more p,
+.more span {
+    text-align: start;
+    padding: 5px 12px;
+    font-size: 12px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.qc_item div {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 44px;
+}
+
+.how {
+    margin: 10px 0 100px;
+
+}
+
+.how .col {
+    margin-top: 25px;
+
+}
+
+.how_item {
+    display: flex;
+    align-items: start;
+    box-shadow: 0 1px 2px rgba(3, 18, 26, 0.20);
+    padding: 10px 10px;
+    /* background-color: rgb(246, 240, 240); */
+    box-shadow: 0 1px 2px #333;
+
+}
+
+.how_item img {
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+
+
+}
+
+.how_text {
+    text-align: justify;
+    color: #333;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    height: 80px;
+}
+
+.how_text p {
+    text-align: justify;
+    margin: 10px 0;
+    /* margin-left: 100px; */
+
+}
+
+.kp_list {
+
+    line-height: 3;
+}
+
+.kp_item {
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.kp_item:hover {
+    border-bottom: 3px solid rgb(31, 165, 232);
+    transition: all 0.05s linear;
+}
+
+.kp_detail-item {
+    line-height: 3;
+    font-size: 14px;
+}
