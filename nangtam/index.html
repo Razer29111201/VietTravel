@@ -926,20 +926,20 @@
         <div id="login" class="hiden">
             <div class="login_bg">
                 <div class="loginn">
-                    <form action="/account/jwtAcc" method="post" class="login-form">
+                    <form action="/account/jwtAcc" method="post" class="login-form" onsubmit="return false">
                         <h1>Đăng Nhập</h1>
                         <div class="form-group">
 
-                            <input type="text" placeholder="Hãy Nhập Tài Khoản" name="user">
+                            <input type="text" placeholder="Hãy Nhập Tài Khoản" id="user">
                             <small id="errvalue"></small>
                         </div>
                         <div class="form-group">
 
-                            <input type="password" placeholder="Hãy Nhập Mật Khẩu" name="pass">
+                            <input type="password" placeholder="Hãy Nhập Mật Khẩu" id="pass">
                             <small id="errvalue"></small>
                         </div>
                         <div class="form-group">
-                            <button class="btn-submit" type="submit" onclick="login()">Đăng Nhập</button>
+                            <button class="btn-submit" type="submit" id="loginbtn">Đăng Nhập</button>
 
                         </div>
                     </form>
@@ -957,7 +957,7 @@
                 <div class="registerr">
                     <h1 class=""> Đăng Ký</h1>
                     <span class="exit cancel"><i class='bx bx-x'></i></span>
-                    <form action="/account/register" method="post" id="form-1">
+                    <form action="/account/register" method="post" id="form-1" onsubmit="return false">
                         <div class="name form-group">
 
                             <input type="text" onchange="validater()" name="name" placeholder="Nhập Tên" id="name">
@@ -967,7 +967,7 @@
 
                         <div class="input-list form-group">
 
-                            <input type="text" name="user" id="user" placeholder="Tên Đăng Nhập">
+                            <input type="text" name="user" id="userdk" placeholder="Tên Đăng Nhập">
                             <div></div>
 
                             <small class="form-message3">
@@ -989,7 +989,7 @@
                         <div class="input-list form-group">
 
                             <input type="password" onchange="validater()" name="pass" placeholder="Nhập Mật Khẩu"
-                                id="pass">
+                                id="passdk">
                             <div></div>
                             <small class="form-message5"></small>
                         </div>
@@ -1035,8 +1035,9 @@
             </div>
         </div>
         <script async src="../index.js"></script>
-        <script async src="./index.js"></script>
         <script async src="../account.js"></script>
+        <script async src="./index.js"></script>
+
 </body>
 
 </html>

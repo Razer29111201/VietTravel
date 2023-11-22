@@ -1,19 +1,3 @@
-var datve = document.querySelectorAll('.datve_item')
-var detail = document.querySelectorAll('.detail_item')
-var adult = document.querySelector('.adult')
-var children = document.querySelector('.children')
-var baby = document.querySelector('.baby')
-var babyid = document.querySelector('#baby')
-var childrenid = document.querySelector('#children')
-var adultid = document.querySelector('#adult')
-var detailpeople = document.querySelector('.detail_people p')
-var people_chose = document.querySelector('.people_chose')
-var detail_chose = document.querySelector('.detail_chose')
-var type_chose = document.querySelector('.type_chose')
-var chose_text = document.querySelector('.chose_text')
-var type_item = document.querySelectorAll('.type_chose-item p')
-var dieuhuong_item = document.querySelectorAll('.b .dieuhuong_item')
-var img_item = document.querySelectorAll('.b .img_item')
 
 
 var header = document.querySelector('#header')
@@ -34,8 +18,11 @@ head.innerHTML = (`
                 <li>Đã Lưu</li>
                 <li>Đặt Chỗ Của Tối</li>
                 <li>VND</li>
+              
                 <li><button class="acc login">Đăng Nhập</button></li>
-                <li><button class="acc register">Đăng Ký</button></li>
+                <li><button  class="acc register">Đăng Ký</button></li>
+                
+                
             </ul>
         </div>
     </div>
@@ -56,7 +43,6 @@ head.innerHTML = (`
                     <li class="dropdown_item">Đưa đón sân bay</li>
                     <li class="dropdown_item">Cho thuê xe</li>
                     <li class="dropdown_item">vé xe khách</li>
-                    aaaaaaaaaaaaaaaaaa
                     <li class="dropdown_item">Tình trạng chuyến bay</li>
                     <li class="dropdown_item">Thông tin giá vé </li>
                 </ul>
@@ -240,51 +226,138 @@ header.appendChild(head)
 footer.appendChild(foot)
 
 
-datve.forEach((e, i) => {
-    e.onclick = () => {
-        detail.forEach(e => {
-            e.classList.add('hiden')
-        })
-        detail[i].classList.remove('hiden')
+
+
+var login = document.querySelector('#login')
+var loginbtn = document.querySelector('.login')
+var exit = document.querySelector('.exit')
+var login_bg = document.querySelector('.login_bg')
+var register = document.querySelector('#register')
+var registerbtn = document.querySelector('.register')
+var cancell = document.querySelector('.cancel')
+var register_bg = document.querySelector('.register_bg')
+
+
+const cancel = (btn) => {
+    btn.classList.add('hiden')
+}
+
+
+if (loginbtn) {
+    loginbtn.onclick = () => {
+        console.log('a');
+        login.classList.remove('hiden')
     }
-})
-console.log('aa')
+}
 
-adultid.onchange = (e) => {
-    adult.innerText = e.target.value
+exit.onclick = () => {
+
+    cancel(login)
 }
-childrenid.onchange = (e) => {
-    children.innerText = e.target.value
-}
-babyid.onchange = (e) => {
-    baby.innerText = e.target.value
-}
-detailpeople.onclick = () => {
-    people_chose.classList.toggle('hiden')
-    console.log(people_chose)
-}
-detail_chose.onclick = () => {
-    type_chose.classList.toggle('hiden')
-    console.log(people_chose)
-}
-type_item.forEach(e => {
-    e.onclick = () => {
-        chose_text.innerText = e.innerHTML
+if (registerbtn) {
+    registerbtn.onclick = () => {
+        console.log('a');
+        register.classList.remove('hiden')
     }
-})
+}
 
-dieuhuong_item.forEach((e, i) => {
 
-    e.onclick = () => {
-        img_item.forEach(ee => {
-            ee.classList.add('hiden')
-        })
-        dieuhuong_item.forEach(ee => {
-            ee.classList.remove('active')
-        })
-        img_item[i].classList.remove('hiden')
-        e.classList.add('active')
+cancell.onclick = () => {
+    cancel(register)
+}
+
+
+var loginbtn = document.getElementById('loginbtn')
+var btnress = document.getElementById('btn-submit')
+
+var user = document.getElementById('user')
+var pass = document.getElementById('pass')
+var name = document.getElementById('name')
+var userdk = document.getElementById('userdk')
+var nber = document.getElementById('nber')
+var email = document.getElementById('email')
+var passdk = document.getElementById('passdk')
+var role = 0
+
+
+var date = new Date
+
+
+var random = Math.floor(Math.random() * 10000);
+
+
+btnress.onclick = () => {
+
+    var arr =
+    {
+        user: userdk.value,
+        pass: passdk.value,
+        role: role
     }
-})
+
+    var value = JSON.stringify(arr)
+    window.localStorage.setItem("key" + random, value)
+
+}
+var datakey = localStorage.length
+var key = []
+for (var i = 0; i < datakey; i++) {
+    key.push(localStorage.key(i))
+}
+console.log(key);
 
 
+loginbtn.onclick = () => {
+    var dataloop = []
+    key.forEach(e => {
+        var datakey = window.localStorage.getItem(e)
+
+        dataloop.push(JSON.parse(datakey))
+    })
+
+
+
+    dataloop.forEach(e => {
+        console.log(e);
+
+        if (e.user == user.value && e.pass == pass.value) {
+            alert("Đăng nhập thành công")
+            setCookie('key', e.user, 1)
+        }
+        else {
+            console.log("Thất bại")
+        }
+    })
+    console.log(user);
+
+
+
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+console.log(document.cookie);
+
+if (getCookie('key').length > 0) {
+
+}

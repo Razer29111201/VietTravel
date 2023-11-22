@@ -17,6 +17,11 @@
     border-radius: 5px;
 }
 
+.body {
+    position: relative;
+    z-index: 1;
+}
+
 .datve {
 
     bottom: 20px;
@@ -130,6 +135,7 @@ svg {
     box-shadow: 0 2px 2px #646363;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .type_chose {

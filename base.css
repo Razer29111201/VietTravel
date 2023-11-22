@@ -75,6 +75,11 @@
     flex: 0 0 66.67%;
 }
 
+.header {
+    position: relative;
+    z-index: 999;
+}
+
 .header_top {
     display: flex;
     align-items: center;
@@ -826,5 +831,44 @@ h1 {
     width: 50px;
     font-size: 20px;
     outline: none;
+
+}
+
+.contact {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background: linear-gradient(120deg, rgb(31, 165, 232) 0%, #5fe2eb 100%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all 0.1s linear;
+}
+
+.contact:hover {
+    width: 240px;
+}
+
+.contact:hover .sdt {
+    display: block;
+}
+
+.contact i {
+    font-size: 20px;
+}
+
+.sdt {
+    display: none;
+    padding: 0 20px;
+    line-height: 1.2;
+
+}
+
+.sdt a {
+    color: #fff;
 
 }
